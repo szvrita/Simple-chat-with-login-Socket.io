@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/stylesheets/chatstyle.css">
+    <script src="https://unpkg.com/jquery"></script>
+</head>
+<body>
+  <nav>
+    <a href="/register">Registration</a>
+    <a href="/login">Login</a>
+    <a href="/logout">Logout</a>
+  </nav>
+<h1>Rita's chat room!</h1>
+<div id="newName">
+<h3>Your username:</h3>
+<h4><%= name %></h4>
+</div>
+<div id="chat-room">
+    <div id="chat-floor">
+        <div id="output"></div>
+        <div id="feedback"></div>
+        <input id="nameplace" type="text" placeholder="name" value=<%= name %>><br/>
+        <input id="message" type="text" placeholder="message"/><br/><br/>
+        <button id="send"><strong>Send</strong></button>
+    </div>
+</div>
+
+<script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous" >
+</script>
+<script src="http://localhost:2000/socket.io/socket.io.js"></script>
+<script src="/javascripts/socket.js"></script>
+
+</body>
+</html>
